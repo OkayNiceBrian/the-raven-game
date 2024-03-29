@@ -1,0 +1,1 @@
+skillshot = "SKILL SHOT"
