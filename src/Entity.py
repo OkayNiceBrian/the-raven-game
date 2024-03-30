@@ -9,14 +9,6 @@ class Entity(ABC):
         self.x = 0
         self.y = 0
 
-    @abstractmethod
-    def update(self):
-        pass
-
-    @abstractmethod
-    def draw(self, screen):
-        pass
-
     def getX(self):
         return self.x
 

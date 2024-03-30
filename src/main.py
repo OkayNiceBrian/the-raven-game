@@ -24,13 +24,7 @@ entities = []
 
 game = Game(screen, clock)
 
-# earthImage = "../assets/earth.png"
-# ballImage = "../assets/ball.png"
-
-# entities.append(earth)
-# entities.append(meteor)
-
-gameplayPaused = True
+gameplayPaused = False
 
         #pygame.draw.circle(screen, (200, 200, 50, 50), ((fliers[0].getX() + viewXOffset) + xdist + (xdist * i), (fliers[0].getY() + viewYOffset) + ydist + (ydist * i)), 1)
 

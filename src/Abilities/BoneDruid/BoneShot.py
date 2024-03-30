@@ -1,24 +1,25 @@
 import pygame
 import sys
+from Ability import Ability
 import util.AbilityTypes as AbilityTypes
 from Entity import Entity
 from abc import ABC, abstractmethod
 
-class BoneShot():
+class BoneShot(Ability):
 
-    def __init__(self):
+    def __init__(self, base_damage=100):
         super().__init__(name="Bone Shot", 
                         type=AbilityTypes.skillshot,
-                        description="Shoots a magic bone at your opponent.")
+                        description="Shoots a magic bone at your opponent.",
+                        level=0)
+        self.base_damage = base_damage
 
-    @abstractmethod
-    def effect(self):
-        pass
+    def effect(self, Game, playerCharacter, opponentCharacter):
+        damageDealt = self.base_damage * self.level
+        damageDealt = damageDealt - opponentCharacter.mag_resist
 
-    @abstractmethod
     def update(self):
         pass
 
-    @abstractmethod
     def draw(self):
         pass
